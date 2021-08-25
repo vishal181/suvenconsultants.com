@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(-45deg, rgb(12, 13, 14), rgb(255, 240, 107), rgb(206, 255, 250), rgb(218, 165, 32));
+            background-size: 400% 400%;
+            animation: Gradient 20s ease infinite;
+        }
+
+        @-webkit-keyframes Gradient {
+
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            font-size: 17px;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin: 16px 25px 0px 25px;
+            float: left;
+        }
+
+        h2.name,
+        h2.drama,
+        h2.sci {
+            display: block;
+            color: white;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 8px 10;
+            border-bottom: 1px solid white;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: 1fr auto;
+            background-color: black;
+            margin: 0;
+
+        }
+
+        footer {
+            position: absolute;
+            margin-bottom: auto;
+            height: 10%;
+            width: 100%;
+            color: rgb(63, 63, 63);
+            font-size: small;
+
+        }
+
+       
+    </style>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: flex;
+        }
+
+        img {
+            vertical-align: middle;
+
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1700px;
+            position: relative;
+            margin: 0.%;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+
+        <li><a href="index.html"><img
+                    src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/365ep.jpg"
+                    width="100px" height="60px"
+                    style="border-radius:6px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); "></a>
+        </li>
+        <br>
+
+        <li><a href="movies.html">
+                <strong>Moviesssssss</strong></a></li>
+        <li><a href="index.html"><strong>TV
+                    Seriesxsasaasasasasasasasasasasa</strong> </a>
+        </li>
+        <li><a href="index.html"> <strong>
+                    Audio</strong> </a></li>
+
+    </ul>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/abc1.jpg"
+                style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/abc2.jpg"
+                style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/abc3.jpg"
+                style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/abc4.jpg"
+                style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/abc5.jpg"
+                style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+<div class="block">
+    <h2 class="name">Popular in Action</h2>
+  
+       
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop1.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        
+
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop2.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop3.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop4.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop5.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop6.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+    </div>
+    <h2 class="drama">Popular in Drama</h2>
+    <div class="gallery">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop7.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop8.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop9.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop10.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop11.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop12.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+    </div>
+    <h2 class="sci">Popular in Sci-Fi</h2>
+    <div class="gallery">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop13.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop14.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop15.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop16.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop17.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+        <img src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/oop18.jpg" width="250"
+            height="250" style="float:left;  margin-bottom:20px; padding:20px">
+    </div>
+
+
+    <div>
+        <footer>
+            <ul>
+                <li><a href="https://internship.suvenconsultants.com/projects/365webproject/index.html"><img
+                            src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/365ep.jpg"
+                            width="70px" height="50px"
+                            style="border-radius:6px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); "></a>
+                </li>
+                <li>
+                    <br>
+                    <br>
+                    <p class="copyright">Powered by 365 Entertainment Portal 2019. All Rights Reserved</p>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
