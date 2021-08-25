@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(
+          -45deg,
+          rgb(12, 13, 14),
+          rgb(255, 240, 107),
+          rgb(206, 255, 250),
+          rgb(218, 165, 32)
+        );
+        background-size: 400% 400%;
+        animation: Gradient 20s ease infinite;
+        -webkit-animation: Gradient 20s ease infinite;
+      }
+
+      @-webkit-keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: black;
+        font-size: 17px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin: 16px 25px 0px 25px;
+        float: left;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        background-color: black;
+        margin: 0;
+      }
+
+      form.example input[type="text"] {
+        padding: 6px;
+        margin-right: 10px;
+
+        font-size: 15px;
+        border: none;
+        float: right;
+        text-align: center;
+        width: 95%;
+        margin: 0;
+        background: gold;
+      }
+
+      form.example button {
+        float: left;
+        width: 5%;
+        margin: 0;
+        padding: 6px;
+        background: #ffd700;
+        color: black;
+        font-size: 15px;
+        border: none;
+        border-left: none;
+        cursor: pointer;
+      }
+
+      footer {
+        position: absolute;
+        margin-bottom: auto;
+        height: 10%;
+        width: 100%;
+        color: rgb(63, 63, 63);
+        font-size: small;
+      }
+
+      #mytext {
+        /* padding: 6px; */
+        right: 10;
+        font-size: 15px;
+        /* border: none;
+            float: none; */
+        text-align: center;
+        width: 90%;
+        /* margin: 10px 0; */
+        background: black;
+      }
+
+      #title {
+        visibility: visible;
+        color: #f1f1f1;
+        position: absolute;
+        padding-top: 100px;
+        /* padding: 20px;  */
+        background: rgba(0, 0, 0, 0.5);
+        width: 20%;
+        float: left;
+      }
+
+      .block {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+      }
+
+      .block img {
+        vertical-align: middle;
+      }
+    </style>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+      }
+
+      .mySlides {
+        display: flex;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1700px;
+        position: relative;
+        margin: 0%;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgb(255, 255, 255);
+      }
+
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li>
+        <a href="index.html"
+          ><img
+            src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/365ep.jpg"
+            width="100px"
+            height="60px"
+            style="
+              border-radius: 6px;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            "
+        /></a>
+      </li>
+      <br />
+      <li>
+        <a href="movies.html"> <strong>Movies</strong></a>
+      </li>
+      <li>
+        <a href="index.html"><strong>TV Series</strong> </a>
+      </li>
+      <li>
+        <a href="index.html"> <strong> Audio</strong> </a>
+      </li>
+    </ul>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img
+          src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc1.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc2.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc3.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc4.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://internship.suvenconsultants.com/projects/365webproject/365mov/abc5.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <br />
+    <script>
+      function myFunction() {
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("mytext");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+
+    <!-- search bar -->
+    <form class="example" action="/action_page.php">
+      <button type="submit" style="float: right">
+        <i class="fa fa-search"></i>
+      </button>
+      <input
+        type="text"
+        style="float: auto"
+        placeholder="Search your favourite movie title"
+        onkeyup="myFunction()"
+        name="search"
+        id="myInput"
+      />
+      <!-- <label for="genre">Genre</label>
+        <select name="genre" id="genre">
+            <option value="all">All</option>
+            <option value="action">Action</option>
+            <option value="drama">Drama</option>
+            <option value="scifi">Sci-Fi</option>
+        </select> -->
+    </form>
+
+    <div class="block">
+      <ul id="mytext">
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano1.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Haider <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano3.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Batman
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a
+            ><img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano4.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Monster Manav
+              <small
+                ><p>
+                  Japanese manga series <br />
+                  written by Tsugumi.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano5.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Kill Bill
+              <small
+                ><p>
+                  2003 American martial arts <br />
+                  film.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano6.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Rowady <small><p>Indian action drama film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano7.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Homelander <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano8.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              No One <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a
+            ><img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano9.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Hangover <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a
+            ><img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano10.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Middle <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a
+            ><img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano11.jpg"
+              width="250"
+              5
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Akhein<small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano12.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Bahubali
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano13.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Shurya
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano14.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Chaplin
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano15.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Doctor Strange
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a
+            ><img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano16.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Baby <small><p>Indian crime tragedy film</p></small>
+            </div> </a
+          >title
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano17.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Akhein <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano18.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Guide <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano19.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Intestreler <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano20.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Deewar <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano21.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              sholay <small><p>Indian crime tragedy film</p></small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano22.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Captain America
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            ><img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano23.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              X-Men
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano24.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Black Widow
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano25.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Iron Man
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano26.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Wonder Women
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano27.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              miss Marvel
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano28.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Hulk
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano29.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Batwomen
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano30.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Batman <small><p>Thriller,Mystery &Comedy</p></small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano31.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Superman
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano32.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Superwomen
+              <small
+                ><p>
+                  A Marvel Comics superhero <br />
+                  team.
+                </p></small
+              >
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano33.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Everything <small><p>Thriller,Mystery &Comedy</p></small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano34.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Mars <small><p>Thriller,Mystery &Comedy</p></small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano35.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Gravity <small><p>Thriller,Mystery &Comedy</p></small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano36.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Martian <small><p>Thriller,Mystery &Comedy</p></small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            ><img
+              src="https://internship.suvenconsultants.com/projects/365webproject/365mov/nano2.jpg"
+              width="250"
+              height="250"
+              style="float: left; margin-bottom: 20px; padding: 20px"
+            />
+            <div id="title">
+              Dream <small><p>Thriller,Mystery &Comedy</p></small>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <footer>
+        <ul>
+          <li>
+            <a
+              href="https://internship.suvenconsultants.com/projects/365webproject/index.html"
+              ><img
+                src="https://internship.suvenconsultants.com/projects/365webproject/365epimages/365ep.jpg"
+                width="70px"
+                height="50px"
+                style="
+                  border-radius: 6px;
+                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                "
+            /></a>
+          </li>
+          <li>
+            <br />
+            <br />
+            <p class="copyright">
+              Powered by 365 Entertainment Portal 2019. All Rights Reserved
+            </p>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
